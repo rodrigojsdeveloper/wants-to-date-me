@@ -1,9 +1,17 @@
 function moveNoButton() {
-  var noButton = document.getElementById("noButton");
-  var container = document.getElementById("buttonContainer");
-  var randomX = Math.floor(Math.random() * (window.innerWidth - 100));
-  var randomY = Math.floor(Math.random() * (window.innerHeight - 50));
-  
-  noButton.style.left = randomX + "px";
-  noButton.style.top = randomY + "px";
+  const noButton = document.getElementById("noButton");
+
+  noButton.style.position = "absolute";
+  noButton.style.bottom = getPosition(10, 90);
+  noButton.style.left = getPosition(10, 90);
+}
+
+function getPosition(min, max) {
+  return Math.random() * (max - min) + min + "%";
+}
+
+function yes() {
+  alert("Parabéns, você aceitou!");
+
+  location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
 }

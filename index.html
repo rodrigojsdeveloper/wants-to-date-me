@@ -1,48 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pedido de Namoro</title>
-  <style>
-  	body {
-   		background: #000;
-    }
-  
-  	h1 {
-		text-align: center;
-        color: #FFF;
-    }
-    
-    button {
-    	background: transparent;
-        border: 1px solid #FFF;
-        color: #FFF;
-    }
-    
-    button:hover {
-    	background: rgba(0, 0, 0, 0.1);
-    }
-  
-    #buttonContainer {
-      position: relative;
-      height: 100vh;
-    }
-    
-    #noButton {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 24px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Quer namorar comigo?</h1>
-  <div id="buttonContainer">
-    <button onclick="alert('Parabéns, você aceitou!')">Sim</button>
-    <button id="noButton" onclick="moveNoButton()">Não</button>
-  </div>
+  <head>
+    <title>Pedido de Namoro</title>
 
-  <script src="./script.js"></script>
-</body>
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Quer namorar comigo?</h1>
+    <div id="buttonContainer">
+      <button onclick="yes()">Sim</button>
+      <button id="noButton" onclick="moveNoButton()">Não</button>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>

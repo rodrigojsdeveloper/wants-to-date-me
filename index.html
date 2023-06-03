@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pedido de Namoro</title>
+  <script>
+    function moveNoButton() {
+      var noButton = document.getElementById("noButton");
+      var container = document.getElementById("buttonContainer");
+      var randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+      var randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+      
+      noButton.style.left = randomX + "px";
+      noButton.style.top = randomY + "px";
+    }
+  </script>
+  <style>
+  	body {
+   		background: #000;
+    }
+  
+  	h1 {
+		text-align: center;
+        color: #FFF;
+    }
+    
+    button {
+    	background: transparent;
+        border: 1px solid #FFF;
+        color: #FFF;
+    }
+    
+    button:hover {
+    	background: rgba(0, 0, 0, 0.1);
+    }
+  
+    #buttonContainer {
+      position: relative;
+      height: 100vh;
+    }
+    
+    #noButton {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quer namorar comigo?</h1>
+  <div id="buttonContainer">
+    <button onclick="alert('Parabéns, você aceitou!')">Sim</button>
+    <button id="noButton" onclick="moveNoButton()">Não</button>
+  </div>
+</body>
+</html>
